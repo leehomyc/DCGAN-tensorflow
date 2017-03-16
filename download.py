@@ -137,7 +137,7 @@ if __name__ == '__main__':
   prepare_data_dir()
 
   if 'celebA' in args.datasets:
-    download_celeb_a('./data')
+    download_celeb_a('/media/harryyang/New Volume/vision-harry')
   if 'lsun' in args.datasets:
     download_lsun('./data')
   if 'mnist' in args.datasets:
