@@ -139,6 +139,6 @@ if __name__ == '__main__':
   if 'celebA' in args.datasets:
     download_celeb_a('/media/harryyang/New Volume/vision-harry')
   if 'lsun' in args.datasets:
-    download_lsun('./data')
+    download_lsun('/media/harryyang/New Volume/vision-harry')
   if 'mnist' in args.datasets:
-    download_mnist('./data')
+    download_mnist('/media/harryyang/New Volume/vision-harry')
