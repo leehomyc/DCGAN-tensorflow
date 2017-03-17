@@ -147,7 +147,8 @@ class DCGAN(object):
     if config.dataset == 'mnist':
       data_X, data_y = self.load_mnist()
     else:
-      data = glob(os.path.join("./data", config.dataset, self.input_fname_pattern))
+      data = glob(os.path.join(config.dataset, self.input_fname_pattern))
+      #data = glob(os.path.join("./data", config.dataset, self.input_fname_pattern))
     #np.random.shuffle(data)
 
     d_optim = tf.train.AdamOptimizer(config.learning_rate, beta1=config.beta1) \
@@ -197,9 +198,10 @@ class DCGAN(object):
     for epoch in xrange(config.epoch):
       if config.dataset == 'mnist':
         batch_idxs = min(len(data_X), config.train_size) // config.batch_size
-      else:      
-        data = glob(os.path.join(
-          "./data", config.dataset, self.input_fname_pattern))
+      else:
+        data = glob(os.path.join(config.dataset, self.input_fname_pattern))      
+    #    data = glob(os.path.join(
+    #      "./data", config.dataset, self.input_fname_pattern))
         batch_idxs = min(len(data), config.train_size) // config.batch_size
 
       for idx in xrange(0, batch_idxs):
