@@ -1,0 +1,1 @@
+python3 main.py --dataset="/media/harryyang/New Volume/vision-harry/ILSVRC2015/Data/CLS-LOC/train/**" --input_fname_pattern="*.JPEG"
